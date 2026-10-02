@@ -1,36 +1,41 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Diagram Collaboration Simulator
 
-## Getting Started
+An in-progress web diagramming simulator using a Next.js frontend and a Django backend scaffold, with planned real-time collaboration through Django Channels/WebSockets.
 
-First, run the development server:
+> The repository name is historical. The actual project plan and source structure are focused on a diagrams.net-style simulator rather than a font demo.
+
+## Intended architecture
+
+### Frontend
+- Next.js 15 / React 19 / TypeScript
+- diagram canvas and drawing tools
+- toolbar, shape library, properties panel, and file-management UI
+- client-side diagram state and collaboration hooks
+
+### Backend
+- Python / Django
+- Django REST Framework-style API structure
+- Django Channels / WebSocket collaboration design
+- persistence for diagrams and version history
+
+## Project status
+
+The repository contains the implementation plan, a phase tracker, a Next.js application, and a Django backend scaffold. The included `TODO.md` still marks most functional phases as incomplete, so this repository should be treated as **work in progress**, not a finished collaborative diagramming product.
+
+## Local frontend development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The frontend development script runs Next.js on port 8000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Planning documents
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `plan.md` — intended architecture and implementation plan
+- `TODO.md` — phase-by-phase implementation tracker
 
-## Learn More
+## Public availability
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Only the code currently present in this repository is public. Future/unfinished capabilities described in the plan should not be interpreted as completed features.
